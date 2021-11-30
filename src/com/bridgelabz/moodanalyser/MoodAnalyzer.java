@@ -21,12 +21,20 @@ public class MoodAnalyzer {
 	}
 	
 	public String analyzeMood() {
+		try {
 		if(message.toLowerCase().contains("sad")) {
 			this.message = "SAD";
 		}else {
 			this.message = "HAPPY";
 		}
-		return this.message;
-		
+		}catch(Exception e) {
+			return "Empty String";
+		}
+//		finally {
+//		return this.message;
+//		}
+		return message;
+	  
 	}
 }
+
