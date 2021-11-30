@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("How is your Mood?");
-		Scanner sc = new Scanner(System.in);
-		
-		String mood = sc.nextLine();
-		MoodAnalyzer moodanalyzer = MoodAnalyzer.getInstance(mood);
-		System.out.println(moodanalyzer.analyzeMood());
+//		System.out.println("How is your Mood?");
+//		Scanner sc = new Scanner(System.in);
+//		
+//		String mood = sc.nextLine();
+//		MoodAnalyzer moodanalyzer = MoodAnalyzer.getInstance(mood);
+//		System.out.println(moodanalyzer.analyzeMood());
 
 	}
 

@@ -2,27 +2,27 @@ package com.bridgelabz.moodanalyser;
 
 public class MoodAnalyzer {
 
+	String message;
 	public static MoodAnalyzer instance;
-	private String mood;
 	
-	private MoodAnalyzer(String mood) {
-		this.mood = mood;
+	private MoodAnalyzer() {
+		
 	}
 	
-	public static MoodAnalyzer getInstance(String mood) {
+	public static MoodAnalyzer getInstance() {
 		if(instance == null) {
-			instance = new MoodAnalyzer(mood);
+			instance = new MoodAnalyzer();
 		}
 		return instance;
 	}
 	
-	public String analyzeMood() {
-		if(mood.toLowerCase().contains("sad")) {
-			mood = "SAD";
+	public String analyzeMood(String message) {
+		if(message.toLowerCase().contains("sad")) {
+			this.message = "SAD";
 		}else {
-			mood = "HAPPY";
+			this.message = "HAPPY";
 		}
-		return mood;
+		return this.message;
 		
 	}
 }
