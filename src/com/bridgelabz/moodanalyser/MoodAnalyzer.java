@@ -28,7 +28,7 @@ public class MoodAnalyzer {
 			this.message = "HAPPY";
 		}
 		}catch(Exception e) {
-			return "Empty String";
+			return "HAPPY";
 		}
 //		finally {
 //		return this.message;
