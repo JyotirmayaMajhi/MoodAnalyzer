@@ -23,13 +23,13 @@ public static MoodAnalyzer mood;
 		assertEquals("SAD",actualMessage);
 	}
 	
-//	@Test
-//	public void givenMessageShouldReturnHappy() {
-//		String message = "I am in any Mood";
-//		
-//		String actualMessage = mood.analyzeMood(message) ;
-//		assertEquals("HAPPY",actualMessage);
-//	}
+	@Test
+	public void givenMessageShouldReturnHappy() {
+		String message = "I am in Happy Mood";
+		mood = new MoodAnalyzer(message);
+		String actualMessage = mood.analyzeMood() ;
+		assertEquals("HAPPY",actualMessage);
+	}
 	
 	@AfterClass
 	public static void endTask() {
