@@ -5,8 +5,12 @@ public class MoodAnalyzer {
 	String message;
 	public static MoodAnalyzer instance;
 	
-	private MoodAnalyzer() {
+	public MoodAnalyzer() {
 		
+	}
+	
+	public MoodAnalyzer(String message) {
+		this.message = message;
 	}
 	
 	public static MoodAnalyzer getInstance() {
@@ -16,7 +20,7 @@ public class MoodAnalyzer {
 		return instance;
 	}
 	
-	public String analyzeMood(String message) {
+	public String analyzeMood() {
 		if(message.toLowerCase().contains("sad")) {
 			this.message = "SAD";
 		}else {
