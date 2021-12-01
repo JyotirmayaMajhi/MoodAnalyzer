@@ -6,40 +6,40 @@ public class MoodAnalyzer {
 
 	String message;
 	public static MoodAnalyzer instance;
-	
+
 	public MoodAnalyzer() {
-		
+
 	}
-	
+
 	public MoodAnalyzer(String message) {
 		this.message = message;
 	}
-	
+
 	public static MoodAnalyzer getInstance() {
-		if(instance == null) {
+		if (instance == null) {
 			instance = new MoodAnalyzer();
 		}
 		return instance;
 	}
-	
+
 	public String analyzeMood() throws MoodAnalysisException {
 		try {
-		if(message == null) {
-			throw new MoodAnalysisException(Mood.NullMood, " Null ");
-		}
-		if(message.toLowerCase().contains("sad")) {
-			this.message = "SAD";
-		}else {
-			this.message = "HAPPY";
-		}
-		}catch(MoodAnalysisException e) {
+			if (message == null) {
+				throw new MoodAnalysisException(Mood.NullMood, " Null ");
+			}
+			if (message.toLowerCase().contains("sad")) {
+				this.message = "SAD";
+			} else {
+				this.message = "HAPPY";
+			}
+		} catch (MoodAnalysisException e) {
+			e.printStackTrace();
 			System.out.println(e);
 		}
 //		finally {
-//		return this.message;
+//		return "Happy";
 //		}
 		return message;
-	  
+
 	}
 }
-
