@@ -27,6 +27,9 @@ public class MoodAnalyzer {
 			if (message == null) {
 				throw new MoodAnalysisException(Mood.NullMood, " Null ");
 			}
+			if(message == " ") {
+				throw new MoodAnalysisException(Mood.EmptyMood, "Empty");
+			}
 			if (message.toLowerCase().contains("sad")) {
 				this.message = "SAD";
 			} else {

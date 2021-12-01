@@ -9,7 +9,7 @@ public class Main {
 //		Scanner sc = new Scanner(System.in);
 		
 //		String mood = sc.nextLine();
-		MoodAnalyzer moodanalyzer = new MoodAnalyzer(null);
+		MoodAnalyzer moodanalyzer = new MoodAnalyzer(" ");
 		System.out.println(moodanalyzer.analyzeMood());
 
 	}
