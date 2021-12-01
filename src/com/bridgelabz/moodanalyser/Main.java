@@ -4,8 +4,8 @@ package com.bridgelabz.moodanalyser;
 
 public class Main {
 
-	public static void main(String[] args) {
-		System.out.println("How is your Mood?");
+	public static void main(String[] args) throws MoodAnalysisException {
+//		System.out.println("How is your Mood?");
 //		Scanner sc = new Scanner(System.in);
 		
 //		String mood = sc.nextLine();
